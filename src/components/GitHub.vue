@@ -1,21 +1,28 @@
 <template>
     <div class="container">
-        <searchuser 
-            updateUser={this.updateUser}
-            updateRepos={this.updateRepos}
+        <SearchUser 
+            @updateuser="updateUser" 
+            @updaterepos="updateRepos" 
         />
-        <userinfo 
-            user={this.state.user}
-            repos={this.state.repos}
+        
+        <UserInfo 
+            :user="user" 
+            :repos="repos" 
         />
     </div>
 </template>
 
 <script>
-// import SearchUser from './SearchUser'
-// import UserInfo from './UserInfo'
+import SearchUser from './SearchUser.vue'
+import UserInfo from './UserInfo.vue'
 
     export default {
+        name: 'GitHub',
+        components: {
+            'SearchUser': SearchUser,
+            'UserInfo': UserInfo
+        },
+
         data () {
             return {
                 user: null,
@@ -25,10 +32,10 @@
 
         methods: {
             updateUser: function(user) {
-                this.setState({user: user});
+                this.user = user;
             },
             updateRepos: function(repos) {
-                this.setState({repos: repos});
+                this.repos = repos;
             },
         }
     }

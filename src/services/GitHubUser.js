@@ -1,13 +1,16 @@
-var axios = require('axios');
+import Vue from 'vue';
+import VueResource from 'vue-resource';
 
-var GitHubUser = {
+Vue.use(VueResource);
+
+const GitHubUser = {
     getByUsername: function(username) {
-        return axios.get('https://api.github.com/users/' + username);
+        return Vue.http.get('https://api.github.com/users/' + username);
     },
 
     getReposByUsername: function(username) {
-        return axios.get('https://api.github.com/users/' + username + '/repos');
+        return Vue.http.get('https://api.github.com/users/' + username + '/repos');
     }
 };
 
-module.exports = GitHubUser;
+export default GitHubUser;
