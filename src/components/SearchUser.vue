@@ -34,6 +34,7 @@ import GitHubUser from '../services/GitHubUser';
                 GitHubUser.getReposByUsername(this.$refs.username.value).then(function(response) {
                     this.$emit('updaterepos', response.data);
                 }.bind(this));
+                this.$refs.username.select();
             },            
         }
     }
