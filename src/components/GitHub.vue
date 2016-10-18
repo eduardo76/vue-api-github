@@ -5,10 +5,12 @@
             @updaterepos="updateRepos" 
         />
         
-        <UserInfo 
-            :user="user" 
-            :repos="repos" 
-        />
+        <transition name="slide-fade">
+            <UserInfo v-if="user"
+                :user="user" 
+                :repos="repos" 
+            />
+        </transition>
     </div>
 </template>
 
@@ -40,3 +42,16 @@ import UserInfo from './UserInfo.vue'
         }
     }
 </script>
+
+<style scoped>
+    .slide-fade-enter-active {
+    transition: all .3s ease;
+    }
+    .slide-fade-leave-active {
+    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+    .slide-fade-enter, .slide-fade-leave-active {
+    padding-left: 20px;
+    opacity: 0;
+    }
+</style>

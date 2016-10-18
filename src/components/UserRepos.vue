@@ -19,11 +19,5 @@
 <script>
     export default {
         props: ['repos'],
-
-        data() {
-            return {
-                reposCount: 0,
-            }
-        }
     }
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="row" v-if="user">
+    <div class="row">
         <div class="col-lg-4">
             <img class="img-circle" :src="user.avatar_url" alt="avatar" width="140" height="140" />
             <h2>{{user.login}}</h2>

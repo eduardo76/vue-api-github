@@ -1,18 +1,24 @@
 # vue-api-github
 
-> A Vue.js project
+> Um projeto Vue.js
 
-## Build Setup
+## Configuração
 
 ``` bash
-# install dependencies
+# instale as dependências
 npm install
 
-# serve with hot reload at localhost:8080
+# roda o servidor com hot reload em localhost:8080
 npm run dev
 
-# build for production with minification
+# roda o build para produção e minificação
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+*Iniciado com [vue-cli](https://github.com/vuejs/vue-cli).*
+
+Para explicação detalhada sobre com as coisas funcionam, consultar a [documentação do vue-loader](http://vuejs.github.io/vue-loader).  
+
+Esse projeto é para uso didático. Foi baseado no curso [Começando com ReactJS](http://jscasts.teachable.com/p/comecando-com-react-js) do [Matheus Lima](https://twitter.com/matheusml).
+
+Transcrito para funcionar com o VueJS.

@@ -10,6 +10,7 @@
                         ref="username"
                         class="form-control"
                         placeholder="Ex: vuejs"
+                        autofocus
                     />
                 </div>
                 <button
@@ -27,6 +28,9 @@ import GitHubUser from '../services/GitHubUser';
     export default {
         methods: {
             handleSubmit: function() {
+                this.$emit('updateuser', null);
+                this.$emit('updaterepos', []);
+
                 GitHubUser.getByUsername(this.$refs.username.value).then(function(response) {
                     this.$emit('updateuser', response.data);
                 }.bind(this));
@@ -34,6 +38,7 @@ import GitHubUser from '../services/GitHubUser';
                 GitHubUser.getReposByUsername(this.$refs.username.value).then(function(response) {
                     this.$emit('updaterepos', response.data);
                 }.bind(this));
+
                 this.$refs.username.select();
             },            
         }
