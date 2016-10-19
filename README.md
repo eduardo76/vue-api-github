@@ -15,8 +15,7 @@ npm run dev
 npm run build
 ```
 
-*Iniciado com [vue-cli](https://github.com/vuejs/vue-cli).*
+Esse projeto é para uso didático. Foi baseado no curso [Começando com ReactJS](http://jscasts.teachable.com/p/comecando-com-react-js) do [Matheus Lima](https://twitter.com/matheusml).  
+Reescrito em [VueJS](http://www.vuejs.org).
 
-Esse projeto é para uso didático. Foi baseado no curso [Começando com ReactJS](http://jscasts.teachable.com/p/comecando-com-react-js) do [Matheus Lima](https://twitter.com/matheusml).
-
-Reescrito com o VueJS.
+[https://twitter.com/eduardotavares7](https://twitter.com/eduardotavares7)
